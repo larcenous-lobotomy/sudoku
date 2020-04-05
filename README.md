@@ -6,6 +6,10 @@ My code has options for easy, medium and hard level, a timer, an evaluate button
                                                                                   cells), and mouseclick selection and
                                                                                   num-key based input.
 The code prints out the solution on the terminal for reference.
+
 All back buttons take you one step back. The reload takes you to the main menu.
+
+INDICATIONS - 
+To run the code - type this into your terminal -> python main.py
 
 NOTE - You have to have these files in the same directory, and python 2.7 and pygame 1.9 installed on your system. 
