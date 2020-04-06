@@ -15,4 +15,4 @@ To run the code - cd into the the Sudoku-master directory, then
 type this into your terminal -> python main.py
 
 NOTE - You have to have these files in the same directory, and python 2.7 and pygame 1.9 installed on your system.
-        I think there is only one or two places where I have used commands that are not allowed in python3. Those ca be changed to python3 alternatives easily. 
+        I think there is only one or two places where I have used commands that are not allowed in python3. Those can be changed to python3 alternatives easily. 
