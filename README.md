@@ -7,20 +7,18 @@ My code acheives the following -
 * Randomly generating a solvable Sudoku puzzle
 * Adjustment of difficulty level based on user's choice (Easy, Medium, Difficult)
 * Timer logs the time taken to finish
-* Check for validity last entry
+* Check for validity of last entry
 * Clean efficient UI with smooth performance
 
-My code has options for easy, medium and hard level, a timer, an evaluate button (which works only after you have filled in all 
-                                                                                  cells), and mouseclick selection and
-                                                                                  num-key based input.
 The code prints out the solution on the terminal for reference.
 
-All back buttons take you one step back. The reload takes you to the main menu.
+All back buttons take you one step back. The reload takes you to the main menu. Also - after you finish, an end screen congratulates you and offers a choice between exit and another game.
 
-INDICATIONS - 
-First download the zipped directory and unzip it.
-To run the code - cd into the the Sudoku-master directory, then
-type this into your terminal -> python main.py
+# INDICATIONS - 
+1. First download the compressed directory from here and extract it.
+1. To run the code - cd into the the Sudoku-master directory, then
+1. type `python main.py` into your terminal
 
-NOTE - You have to have these files in the same directory, and python 2.7 and pygame 1.9 installed on your system.
-        I think there is only one or two places where I have used commands that are not allowed in python3. Those can be changed to python3 alternatives easily. 
+# REQUIREMENTS
+You have to have these files in the same directory, and Python 2.7 and Pygame 1.9 installed on your system.
+There are only one or two places where I have used commands that are not allowed in Python3. Those may be changed to Python3 alternatives easily. 
