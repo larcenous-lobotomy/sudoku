@@ -14,7 +14,7 @@ The code prints out the solution on the terminal for reference.
 
 All back buttons take you one step back. The reload takes you to the main menu. Also - after you finish, an end screen congratulates you and offers a choice between exit and another game.
 
-# INDICATIONS - 
+# INDICATIONS
 1. First download the compressed directory from here and extract it.
 1. To run the code - cd into the the Sudoku-master directory, then
 1. type `python main.py` into your terminal
