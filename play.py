@@ -32,7 +32,7 @@ class Cell :
         
         if  self.val != 0:
             text = fnt.render(str(self.val), 1, (0, 0, 0))
-            win.blit(text, (x + 20, y + 20))
+            win.blit(text, (x + 15, y + 5))
             
 class Grid :
     def __init__(self, level): 
@@ -76,7 +76,7 @@ class Grid :
                     pygame.draw.rect(win, (255,0,0), (j*60,i*60,60,60), 3)
                     
     
-    #making a selection (and deselecting others) - selects only changeable keys        
+    #making a selection (and deselecting others) - selects only changeable cells        
     def selection(self,row, col) :
         flag = False
         if self.cell_list[row][col].selected :
@@ -123,7 +123,7 @@ def format_time(secs):
     timer = hour + ":" + minute + ":" + sec
     return timer
 
-#My Function callable in main        
+#Play function callable in main        
 def PLAY(win) :
     img = pygame.image.load("left_arrow.png")
     re = pygame.image.load("undo.png")
@@ -133,7 +133,7 @@ def PLAY(win) :
         #drawing the buttons for level setting
         term_x = [200, 400]
         term_y = [200, 250, 300, 350]
-        gamerun = True
+        gamerun = False
         level = None  
         key = None
         run = True
@@ -149,7 +149,7 @@ def PLAY(win) :
             x = [200, 400]
             y = [200, 250, 300,350]
             for i in range(3) :
-                win.blit(text[i], (250, y[i] + 15))  
+                win.blit(text[i], (220, y[i] - 5))  
             win.blit(img, (0, 550))
             pygame.display.update()
                 
@@ -178,43 +178,44 @@ def PLAY(win) :
                     elif x > 0 and x < 50 and y > 560 and y < 600:
                         return
 
+        gamerun = True
         #clear window contents to construct Sudoku grid
         win.fill((255,255,255))
         board = Grid(level)
         exit = False
-        back = False
         start = time.time()
         timer = 0
         #print solution in terminal in readable format to make evaluation easier
         for row in board.puzzle[0] :
             print(row)
-        print
-        print
+        print()
+        print()
         while gamerun :
             if not exit :
                 board.draw(win)
                 pygame.draw.rect(win, (150,150,150), (0, 544, 300, 60))
                 style = pygame.font.SysFont("comicsans", 40)
-                win.blit(style.render("EVALUATE", 1, (0, 0, 0)), (100,560))
+                win.blit(style.render("EVALUATE", 1, (0, 0, 0)), (80,540))
                 win.blit(img, (0, 550))
                 pygame.draw.line(win, (0,0,0), (60,540), (60,600), 4)
-                pygame.draw.rect(win,(255,255,255), (300,560,300,55),0)
+                pygame.draw.rect(win,(255,255,255), (300,550,300,80),0)
                 pygame.draw.line(win, (0,0,0), (300,540), (300,600), 4)
                 pygame.draw.line(win, (0,0,0), (360,540), (360,600), 4)
                 timer = int(time.time() - start)
                 lstyle = pygame.font.SysFont("comicsans", 40)
-                win.blit(lstyle.render(format_time(timer), 1, (0,0,0)), (400, 560))
+                win.blit(lstyle.render(format_time(timer), 1, (0,0,0)), (370, 540))
                 if board.selected != None :
                     if valid(board.vals, board.vals[board.selected[0]][board.selected[1]], board.selected) == False:
-                        win.blit(lstyle.render("X", 1, (255,0,0)), (320, 560))
+                        win.blit(lstyle.render("X", 1, (255,0,0)), (320, 540))
                     elif valid(board.vals, board.vals[board.selected[0]][board.selected[1]], board.selected) == True:
-                        win.blit(lstyle.render("V", 1, (0,255,0)), (320, 560))
+                        win.blit(lstyle.render("V", 1, (0,255,0)), (320, 540))
                 pygame.display.update()
             for event in pygame.event.get() :
                 #if quit is detected
                 if event.type == QUIT :
                     pygame.quit()
                     sys.exit()
+                    
                 #if user clicks on screen
                 elif event.type == MOUSEBUTTONDOWN and not exit:
                     x, y = pygame.mouse.get_pos()
@@ -235,7 +236,7 @@ def PLAY(win) :
                         if type(result) == bool :
                             win.fill((255,255,255))
                             txt = fnt.render(text, True, color)
-                            win.blit(txt, (130, 300))
+                            win.blit(txt, (40, 300))
                             win.blit(re, (200, 400))
                             pygame.display.update()
                             while True :
