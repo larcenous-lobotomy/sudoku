@@ -25,7 +25,7 @@ if __name__ == "__main__" :
         #render title
         win.blit(FNT.render(("SUDOKU"), 1, (0, 128, 0)), (200, 100))
         text = fnt.render("PLAY", 0, (128, 128, 128)) 
-        win.blit(text, (250, 310))
+        win.blit(text, (220, 300))
         for event in pygame.event.get():
             #quit game if user clicks the cross
             if event.type == QUIT:
