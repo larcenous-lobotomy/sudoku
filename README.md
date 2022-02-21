@@ -1,7 +1,5 @@
 # PYGAME-SUDOKU
 Sudoku game in Pygame 1.9, code in Python 2.7
-This game was actually a team project, but I have added only my part of the deal.
-I had to write a function to take a display surface as an argument and write on it. 
 
 My code acheives the following - 
 * Randomly generating a solvable Sudoku puzzle
