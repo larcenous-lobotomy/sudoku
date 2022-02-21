@@ -1,5 +1,5 @@
 # PYGAME-SUDOKU
-Sudoku game in Pygame 1.9, code in Python 2.7
+Sudoku game in Pygame 1.9, code in Python 3
 
 My code acheives the following - 
 * Randomly generating a solvable Sudoku puzzle
