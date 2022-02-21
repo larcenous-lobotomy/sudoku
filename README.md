@@ -1,5 +1,5 @@
-# PYGAME-SUDOKU
-Sudoku game in Pygame 1.9, code in Python 3
+# Sudoku
+An implementation of the traditional 9x9 Sudoku game in Python 3 and Pygame.
 
 My code acheives the following - 
 * Randomly generating a solvable Sudoku puzzle
@@ -18,4 +18,4 @@ All back buttons take you one step back. The reload takes you to the main menu. 
 1. type `python main.py` into your terminal
 
 # REQUIREMENTS
-You have to have these files in the same directory, and Python 3 and Pygame 1.9 installed on your system.
+These files must all be in the same directory, and there should be an installation of Python 3 and Pygame 1.9 on the system.
