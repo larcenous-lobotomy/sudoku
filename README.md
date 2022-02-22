@@ -15,7 +15,7 @@ All back buttons take you one step back. The reload takes you to the main menu. 
 # Indications
 1. First download the compressed directory from here and extract it.
 1. To run the code - cd into the the Sudoku-master directory, then
-1. type `python main.py` into your terminal
+1. Enter `python main.py` in the terminal
 
 # Requirements
 These files must all be in the same directory, and there should be an installation of Python 3 and Pygame 1.9 on the system.
